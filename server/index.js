@@ -28,7 +28,7 @@ app.post('/register', async (req, res) => {
     }
     const hash = await bcrypt.hash(password, 10);
     const user = await User.create({ username, email, password: hash, firstName, lastName });
-    res.json({ user: { username: user.username, email: user.email, firstName, lastName } });
+    res.json({ user: { id: user.id, username: user.username, email: user.email, firstName, lastName } });
   } catch (err) {
     res.status(500).json({ message: 'Registration failed.' });
   }
@@ -45,7 +45,7 @@ app.post('/login', async (req, res) => {
     if (!user) return res.status(401).json({ message: 'Invalid credentials.' });
     const match = await bcrypt.compare(password, user.password);
     if (!match) return res.status(401).json({ message: 'Invalid credentials.' });
-    res.json({ user: { username: user.username, email: user.email, firstName: user.firstName, lastName: user.lastName } });
+    res.json({ user: { id: user.id, username: user.username, email: user.email, firstName: user.firstName, lastName: user.lastName } });
   } catch (err) {
     res.status(500).json({ message: 'Login failed.' });
   }
@@ -53,7 +53,7 @@ app.post('/login', async (req, res) => {
 
 // --- Orders Endpoints ---
 app.post('/orders', async (req, res) => {
-  console.log('Received POST /orders');
+  console.log('Received POST /orders with body:', req.body); // DEBUG LOG
   const { userId, items, shippingName, shippingEmail, shippingAddress, total } = req.body;
   if (!userId || !items || !shippingName || !shippingEmail || !shippingAddress || !total) {
     return res.status(400).json({ message: 'All fields are required.' });
@@ -110,6 +110,26 @@ app.get('/esewa/fail', async (req, res) => {
   } catch (err) {
     res.status(500).send('Failed to update order');
   }
+});
+
+// --- Products Endpoint ---
+const fs = require('fs');
+const path = require('path');
+
+app.get('/products', (req, res) => {
+  const filePath = path.join(__dirname, 'products.json');
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).json({ message: 'Could not load products.' });
+      return;
+    }
+    try {
+      const products = JSON.parse(data);
+      res.json(products);
+    } catch (e) {
+      res.status(500).json({ message: 'Invalid products data.' });
+    }
+  });
 });
 
 app.get('/', (req, res) => {

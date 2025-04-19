@@ -1,0 +1,146 @@
+[
+  {
+    "id": 101,
+    "title": "Antique Brass Telescope",
+    "price": 89.99,
+    "category": "antiques",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "description": "A beautiful antique brass telescope for collectors."
+  },
+  {
+    "id": 102,
+    "title": "Classic Literature Book Set",
+    "price": 49.99,
+    "category": "books",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80",
+    "description": "A set of timeless classic literature books."
+  },
+  {
+    "id": 103,
+    "title": "Collectible Model Car",
+    "price": 39.99,
+    "category": "collectibles",
+    "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+    "description": "A rare collectible model car for enthusiasts."
+  },
+  {
+    "id": 104,
+    "title": "Acoustic Guitar",
+    "price": 129.99,
+    "category": "musical instruments",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
+    "description": "A high-quality acoustic guitar for musicians."
+  },
+  {
+    "id": 105,
+    "title": "Soccer Ball",
+    "price": 19.99,
+    "category": "sports",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80",
+    "description": "A durable soccer ball for all ages."
+  },
+  {
+    "id": 106,
+    "title": "Retro Gaming Console",
+    "price": 99.99,
+    "category": "gaming systems",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80",
+    "description": "A retro gaming console for classic game lovers."
+  },
+  {
+    "id": 107,
+    "title": "Handmade Toy Train",
+    "price": 24.99,
+    "category": "toys",
+    "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    "description": "A handmade wooden toy train."
+  },
+  {
+    "id": 108,
+    "title": "Craft Supplies Kit",
+    "price": 15.99,
+    "category": "crafts",
+    "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3fd8?auto=format&fit=crop&w=400&q=80",
+    "description": "A complete kit for craft lovers."
+  },
+  {
+    "id": 109,
+    "title": "Model Airplane Hobby Set",
+    "price": 29.99,
+    "category": "hobbies",
+    "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3fd8?auto=format&fit=crop&w=400&q=80",
+    "description": "A fun model airplane set for hobbyists."
+  },
+  {
+    "id": 110,
+    "title": "Vintage Pocket Watch",
+    "price": 59.99,
+    "category": "antiques",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "description": "A classic vintage pocket watch with intricate design."
+  },
+  {
+    "id": 111,
+    "title": "Science Fiction Novel",
+    "price": 19.99,
+    "category": "books",
+    "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=400&q=80",
+    "description": "A thrilling science fiction novel for avid readers."
+  },
+  {
+    "id": 112,
+    "title": "Rare Action Figure",
+    "price": 49.99,
+    "category": "collectibles",
+    "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+    "description": "A rare collectible action figure for fans."
+  },
+  {
+    "id": 113,
+    "title": "Electric Keyboard",
+    "price": 199.99,
+    "category": "musical instruments",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
+    "description": "A versatile electric keyboard for musicians."
+  },
+  {
+    "id": 114,
+    "title": "Basketball",
+    "price": 22.99,
+    "category": "sports",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80",
+    "description": "A professional-grade basketball."
+  },
+  {
+    "id": 115,
+    "title": "Modern Gaming Mouse",
+    "price": 49.99,
+    "category": "gaming systems",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80",
+    "description": "A high-precision gaming mouse for pro gamers."
+  },
+  {
+    "id": 116,
+    "title": "Plush Teddy Bear",
+    "price": 14.99,
+    "category": "toys",
+    "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    "description": "A soft and cuddly plush teddy bear."
+  },
+  {
+    "id": 117,
+    "title": "DIY Painting Kit",
+    "price": 18.99,
+    "category": "crafts",
+    "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3fd8?auto=format&fit=crop&w=400&q=80",
+    "description": "A kit for painting your own masterpiece."
+  },
+  {
+    "id": 118,
+    "title": "RC Helicopter Set",
+    "price": 39.99,
+    "category": "hobbies",
+    "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3fd8?auto=format&fit=crop&w=400&q=80",
+    "description": "A remote-controlled helicopter for hobbyists."
+  }
+]

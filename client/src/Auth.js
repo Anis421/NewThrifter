@@ -45,6 +45,7 @@ const Auth = ({ onAuth, onClose }) => {
         body: JSON.stringify(payload)
       });
       const data = await res.json();
+      console.log('RAW LOGIN/REGISTER RESPONSE:', data);
       if (!res.ok) throw new Error(data.message || 'Error');
       // Force update parent state before closing modal
       onAuth(data.user);

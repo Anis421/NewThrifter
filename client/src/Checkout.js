@@ -21,6 +21,13 @@ const Checkout = ({ cartItems, onBack, onSubmit, user }) => {
     e.preventDefault();
     setSubmitted(true);
     setOrderError('');
+    // Debug log to inspect values being sent to backend
+    console.log({
+      user,
+      cartItems,
+      form,
+      total
+    });
     // Submit order to backend
     try {
       const res = await fetch('/orders', {

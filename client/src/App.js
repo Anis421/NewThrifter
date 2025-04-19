@@ -3,7 +3,7 @@ import './App.css';
 import ProductDetail from './ProductDetail';
 import Cart from './Cart';
 import Checkout from './Checkout';
-import Categories from './Categories';
+import CategorySlider from './CategorySlider';
 import Auth from './Auth';
 import Sidebar from './Sidebar';
 import ESewaSuccess from './ESewaSuccess';
@@ -32,14 +32,16 @@ function App() {
     if (saved) setUser(JSON.parse(saved));
   }, []);
 
-  // Fetch categories and products from Fake Store API
+  // Fetch products from backend
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products/categories')
+    fetch('http://localhost:5000/products')
       .then(res => res.json())
-      .then(data => setCategories(data));
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(data => {
+        setProducts(data);
+        // Extract unique categories
+        const cats = [...new Set(data.map(item => item.category))];
+        setCategories(cats);
+      });
   }, []);
 
   useEffect(() => {
@@ -80,6 +82,7 @@ function App() {
     localStorage.removeItem('user');
   };
 
+  // Use categories and products from backend
   const filteredItems = products.filter(item => {
     const matchesCategory = selectedCategory ? item.category === selectedCategory : true;
     const matchesSearch = search.trim() === '' ? true : item.title.toLowerCase().includes(search.trim().toLowerCase());
@@ -117,41 +120,42 @@ function App() {
             <header className="header">
               <div className="nav-bar">
                 <button className="menu-btn" onClick={() => setSidebarOpen(true)}>☰</button>
-                <h1 className="logo">SHOPGOODWILL<span>.com</span></h1>
-                <div className="search-bar">
+                <h1 className="logo">The Thrifter</h1>
+                <div className="search-bar enhanced-search">
                   <input
                     type="text"
-                    placeholder="Search products..."
+                    placeholder="🔍 Search for products, brands, or categories..."
                     value={search}
                     onChange={e => setSearch(e.target.value)}
+                    style={{ padding: '0.6rem 1.2rem', borderRadius: '24px', border: '1.5px solid #0090d0', fontSize: '1.08rem', minWidth: 220, outline: 'none', boxShadow: '0 1px 4px rgba(0,144,208,0.06)' }}
                   />
                 </div>
-                <button className="cart-btn" onClick={() => setCartOpen(true)}>
-                  🛒
+                <button className="cart-btn enhanced-cart-btn" onClick={() => setCartOpen(true)}>
+                  <span className="cart-icon">🛒</span>
                   {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
                 </button>
                 {user ? (
                   <>
                     <span className="user-info">Hello, {user.firstName ? user.firstName : user.username}!</span>
-                    <button className="auth-btn" onClick={handleLogout}>Logout</button>
+                    <button className="auth-btn enhanced-auth-btn logout" onClick={handleLogout}>Logout</button>
                   </>
                 ) : (
-                  <button className="auth-btn" onClick={() => setAuthOpen(true)}>Login / Register</button>
+                  <button className="auth-btn enhanced-auth-btn" onClick={() => setAuthOpen(true)}>
+                    <span role="img" aria-label="login">🔑</span> Login / Register
+                  </button>
                 )}
               </div>
               <div className="banner">
-                <div className="banner-img"></div>
+                <div className="banner-img banner-bg"></div>
                 <div className="banner-text">
-                  <h2>#create opportunity</h2>
-                  <p>with SHOPGOODWILL.com</p>
-                  <button className="learn-more">LEARN MORE</button>
+                  <h2>One Stop Solution With The Thrifter</h2>
                 </div>
               </div>
             </header>
             <main>
               <div className="shop-categories">
                 <h3>SHOP TOP CATEGORIES</h3>
-                <Categories 
+                <CategorySlider 
                   categories={categories} 
                   onSelect={cat => setSelectedCategory(cat)} 
                 />
