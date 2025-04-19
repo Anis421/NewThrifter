@@ -1,0 +1,102 @@
+.sidebar-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 2000;
+  display: none;
+  transition: background 0.2s;
+}
+.sidebar-backdrop.open {
+  display: block;
+}
+.sidebar {
+  position: fixed;
+  top: 0; left: -300px;
+  width: 270px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+  z-index: 2010;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  transition: left 0.25s cubic-bezier(0.4,0,0.2,1);
+  display: flex;
+  flex-direction: column;
+}
+.sidebar.open {
+  left: 0;
+}
+.sidebar-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.sidebar-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0090d0;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.sidebar-user-info {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a3863;
+}
+.sidebar-email {
+  font-size: 0.97rem;
+  color: #555;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sidebar-link {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.07rem;
+  color: #1a3863;
+  padding: 0.5rem 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.16s;
+}
+.sidebar-link:hover {
+  background: #f2f7fa;
+}
+.sidebar-footer {
+  margin-top: auto;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.93rem;
+  padding-top: 2rem;
+}
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1.2rem 0 1rem 0;
+}

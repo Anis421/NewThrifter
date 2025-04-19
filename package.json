@@ -1,0 +1,16 @@
+{
+  "name": "shopgoodwill-clone",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "version": "1.0.0",
+  "description": "Exact copy of shopgoodwill.com",
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  }
+}
