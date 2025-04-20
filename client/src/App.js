@@ -8,6 +8,7 @@ import Auth from './Auth';
 import Sidebar from './Sidebar';
 import ESewaSuccess from './ESewaSuccess';
 import ESewaFail from './ESewaFail';
+import ESewaPaymentButton from './ESewaPaymentButton';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -38,8 +39,13 @@ function App() {
       .then(res => res.json())
       .then(data => {
         setProducts(data);
-        // Extract unique categories
+        // Extract unique categories from products
         const cats = [...new Set(data.map(item => item.category))];
+        // Ensure clothing categories are always present
+        const required = ["men's clothing", "women's clothing"];
+        required.forEach(cat => {
+          if (!cats.includes(cat)) cats.push(cat);
+        });
         setCategories(cats);
       });
   }, []);
@@ -181,7 +187,13 @@ function App() {
               <Cart cartItems={cart} onClose={() => setCartOpen(false)} onRemove={handleRemoveFromCart} onCheckout={handleCheckout} />
             )}
             {checkoutOpen && (
-              <Checkout cartItems={cart} onBack={() => setCheckoutOpen(false)} onSubmit={handleOrderComplete} user={user} />
+              <div>
+                <Checkout cartItems={cart} onBack={() => setCheckoutOpen(false)} onSubmit={handleOrderComplete} user={user} />
+                <div style={{ margin: '20px 0' }}>
+                  <h3>Pay with eSewa (Test)</h3>
+                  <ESewaPaymentButton amount={cart.reduce((sum, item) => sum + (item.price || 0), 0)} pid={"ORDER123"} />
+                </div>
+              </div>
             )}
             {authOpen && (
               <Auth onAuth={handleAuth} onClose={() => setAuthOpen(false)} />

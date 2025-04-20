@@ -17,7 +17,7 @@ const Cart = ({ cartItems, onClose, onRemove, onCheckout }) => {
             <ul className="cart-list">
               {cartItems.map((item, idx) => (
                 <li key={idx} className="cart-item">
-                  <img src={item.img} alt={item.title} className="cart-thumb" />
+                  <img src={item.image || item.img} alt={item.title} className="cart-thumb" />
                   <div className="cart-info">
                     <div className="cart-title">{item.title}</div>
                     <div className="cart-price">${item.price}</div>

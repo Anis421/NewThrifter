@@ -142,5 +142,69 @@
     "category": "hobbies",
     "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
     "description": "A remote-controlled helicopter for hobbyists."
+  },
+  {
+    "id": 119,
+    "title": "Men's Classic Denim Jacket",
+    "price": 54.99,
+    "category": "men's clothing",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "description": "A timeless denim jacket for men, perfect for all seasons."
+  },
+  {
+    "id": 120,
+    "title": "Women's Elegant Summer Dress",
+    "price": 39.99,
+    "category": "women's clothing",
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "description": "A stylish and comfortable summer dress for women."
+  },
+  {
+    "id": 121,
+    "title": "Men's Slim Fit T-Shirt",
+    "price": 24.99,
+    "category": "men's clothing",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80",
+    "description": "A comfortable slim fit t-shirt for men, available in various colors."
+  },
+  {
+    "id": 122,
+    "title": "Men's Casual Chinos",
+    "price": 34.99,
+    "category": "men's clothing",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "description": "Stylish and versatile casual chinos for men."
+  },
+  {
+    "id": 123,
+    "title": "Men's Leather Jacket",
+    "price": 99.99,
+    "category": "men's clothing",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "description": "Premium quality leather jacket for men."
+  },
+  {
+    "id": 124,
+    "title": "Women's Floral Blouse",
+    "price": 29.99,
+    "category": "women's clothing",
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "description": "Elegant floral print blouse for women."
+  },
+  {
+    "id": 125,
+    "title": "Women's Skinny Jeans",
+    "price": 44.99,
+    "category": "women's clothing",
+    "image": "https://images.unsplash.com/photo-1514995669114-d1c1b7a83a48?auto=format&fit=crop&w=400&q=80",
+    "description": "Trendy skinny jeans for women, perfect for any occasion."
+  },
+  {
+    "id": 126,
+    "title": "Women's Winter Coat",
+    "price": 89.99,
+    "category": "women's clothing",
+    "image": "https://images.unsplash.com/photo-1469398715555-76331a6c7fa0?auto=format&fit=crop&w=400&q=80",
+    "description": "Warm and stylish winter coat for women."
   }
 ]

@@ -4,7 +4,7 @@ import ESewaButton from './eSewaButton';
 
 const Checkout = ({ cartItems, onBack, onSubmit, user }) => {
   const [form, setForm] = useState({ name: '', email: '', address: '' });
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false); // Removed unused variable to fix eslint warning
   const [orderId, setOrderId] = useState(null);
   const [orderCreated, setOrderCreated] = useState(false);
   const [orderError, setOrderError] = useState('');
@@ -19,7 +19,7 @@ const Checkout = ({ cartItems, onBack, onSubmit, user }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    // setSubmitted(true); // Removed unused variable to fix eslint warning
     setOrderError('');
     // Debug log to inspect values being sent to backend
     console.log({
